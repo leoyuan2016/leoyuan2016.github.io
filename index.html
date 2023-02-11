@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<script>
+     function playMeow() {
+     	var meowAudio = new Audio('./meow.mp3');
+        meowAudio.play();
+     }
+      function takePhoto() {
+     	var photoAudio = new Audio('./take_a_photo.mp3');
+        photoAudio.play();
+     }
+ </script>
 <body>
 <h1>Hello everyone, I'm Leo.</h1>
 <h2>I LOVE my cat</h3>
@@ -8,7 +18,13 @@
 <h5> i love lou from daffron elementry school</h6>
 <h6>i also love shreyansh from daffron</h6>
 <p>This is my cat.</p>
-<img src="./cat0.jpg" width="750" height="450">
-<img src="./my_class.jpg" width="750" height="500">
+<a onclick="playMeow();">
+	<img src="./cat0.jpg" width="750" height="450">
+</a>
+
+<a onclick="takePhoto();">
+	<img src="./my_class.jpg" width="750" height="500">
+
+</a>
 </body>
 </html>
