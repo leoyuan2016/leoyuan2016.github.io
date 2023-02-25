@@ -1,0 +1,8 @@
+window.setInterval(someFunction, 2000)
+
+function someFunction() {
+    // it does something in here
+}
+
+
+How can we allow player to change difficulties?

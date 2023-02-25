@@ -1,0 +1,18 @@
+// Two ways to add comments
+// 1. start a line with //
+// 2. wrap your comment inside <!-- put your comment here -->
+
+<!-- two new things we see here -->
+<!-- window -->
+<!-- document -->
+
+<script>
+	const colors=["red","green","blue","yellow","violet","pink","cyan","teal","magenta","skyblue","snow","gold","springgreen"];	// colors is an array, because all the elements are inside [ ]
+	
+	var timer = window.setInterval(changeColor, 500);
+
+	function changeColor(){
+		var n = Math.floor(Math.random() * colors.length);
+		document.body.style.backgroundColor=colors[n];
+	}
+</script>

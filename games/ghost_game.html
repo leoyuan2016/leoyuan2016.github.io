@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ghost click game</title>
+</head>
+
+<body style="background-color:rgb(0, 221, 255);">
+	<img id="ghost" 
+		style="position: absolute; -webkit-transition: all 0.4s;"
+		onclick="caughtMe()"
+		src="./media/halo_ghost.png" width="200">
+	
+	<p id="score_number">Score: 0</p>
+</body>
+
+
+<script>	
+	var score=0;
+	var sec=0;
+	var timer=window.setInterval(moveEverything,900);
+	function moveEverything(){
+		sec++;
+		document.getElementById("ghost").style.left=Math.random()*900+"px";
+		document.getElementById("ghost").style.top=Math.random()*600+"px";
+		if(sec>10){
+			clearInterval(timer)
+			alert("You scored " + score);
+			location.reload();
+		}
+	}
+	function caughtMe() {
+		score++;
+		document.getElementById("score_number").innerText="Score: "+score;
+	}
+
+
+
+</script>
+</html>
